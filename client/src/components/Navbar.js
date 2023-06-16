@@ -23,7 +23,6 @@ const AppNavbar = () => {
               <Nav.Link as={Link} to="/">
                 Search For Books
               </Nav.Link>
-              {/* If user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to="/saved">
@@ -40,14 +39,12 @@ const AppNavbar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {/* Set modal data up */}
       <Modal
         size="lg"
         show={showModal}
         onHide={() => setShowModal(false)}
         aria-labelledby="signup-modal"
       >
-        {/* Tab container to do either signup or login component */}
         <Tab.Container defaultActiveKey="login">
           <Modal.Header closeButton>
             <Modal.Title id="signup-modal">
